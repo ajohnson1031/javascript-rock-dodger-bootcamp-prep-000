@@ -91,11 +91,11 @@ function createRock(x) {
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
      */
-     myReq
+     window.requestAnimationFrame(moveRock)
   }
 
   // We should kick of the animation of the rock around here
-  myReq
+  window.requestAnimationFrame(moveRock)
   // Add the rock to ROCKS so that we can remove all rocks
   // when there's a collision
   ROCKS.push(rock)
@@ -103,7 +103,7 @@ function createRock(x) {
   // Finally, return the rock element you've created
   return rock
 }
-var myReq = window.requestAnimationFrame(moveRock)
+
 /**
  * End the game by clearing `gameInterval`,
  * removing all ROCKS from the DOM,
@@ -118,7 +118,7 @@ function endGame() {
   }
 
   window.removeEventListener('keydown', moveDodger)
-  window.cancelAnimationFrame(myReq)
+
   alert('YOU LOSE!')
 }
 
