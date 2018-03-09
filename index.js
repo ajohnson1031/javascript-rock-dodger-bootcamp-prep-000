@@ -97,7 +97,7 @@ function createRock(x) {
   // We should kick of the animation of the rock around here
   if (killAll)
     window.cancelAnimationRequest(moveRock)
-  else 
+  else
     window.requestAnimationFrame(moveRock)
   // Add the rock to ROCKS so that we can remove all rocks
   // when there's a collision
@@ -121,7 +121,7 @@ function endGame() {
   }
 
   window.removeEventListener('keydown', moveDodger)
-  killAll = true
+  killAnim = true
   alert('YOU LOSE!')
 }
 
