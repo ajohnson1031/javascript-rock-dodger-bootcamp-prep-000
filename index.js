@@ -9,7 +9,7 @@ const LEFT_ARROW = 37 // use e.which!
 const RIGHT_ARROW = 39 // use e.which!
 const ROCKS = []
 const START = document.getElementById('start')
-var myReq = window.requestAnimationFrame(moveRock)
+
 var gameInterval = null
 /**
  * Be aware of what's above this line,
@@ -103,7 +103,7 @@ function createRock(x) {
   // Finally, return the rock element you've created
   return rock
 }
-
+var myReq = window.requestAnimationFrame(moveRock)
 /**
  * End the game by clearing `gameInterval`,
  * removing all ROCKS from the DOM,
