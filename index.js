@@ -120,7 +120,7 @@ function endGame() {
   }
 
   window.removeEventListener('keydown', moveDodger)
-
+  cancelAnimationFrame(myReq)
   alert('YOU LOSE!')
 }
 
