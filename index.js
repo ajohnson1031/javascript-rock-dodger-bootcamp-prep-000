@@ -39,9 +39,9 @@ function checkCollision(rock) {
     if(rockLeftEdge < dodgerLeftEdge && rockRightEdge > dodgerRightEdge ||
     rockLeftEdge > dodgerLeftEdge && rockRightEdge < dodgerRightEdge ||
     rockLeftEdge < dodgerRightEdge && rockRightEdge > dodgerRightEdge) {
-      return true
+      return false
     } else {
-      return false;
+      return true;
     }
   }
 }
@@ -119,7 +119,7 @@ function endGame() {
   }
 
   window.removeEventListener('keydown', moveDodger)
-  
+
   alert('YOU LOSE!')
 }
 
