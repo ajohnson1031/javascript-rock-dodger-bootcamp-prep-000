@@ -11,7 +11,6 @@ const ROCKS = []
 const START = document.getElementById('start')
 
 var gameInterval = null
-let myReq = window.requestAnimationFrame(moveRock)
 /**
  * Be aware of what's above this line,
  * but all of your work should happen below.
