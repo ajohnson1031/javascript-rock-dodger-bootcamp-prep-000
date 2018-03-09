@@ -11,7 +11,7 @@ const ROCKS = []
 const START = document.getElementById('start')
 
 var gameInterval = null
-
+let myReq = window.requestAnimationFrame(moveRock)
 /**
  * Be aware of what's above this line,
  * but all of your work should happen below.
@@ -80,7 +80,7 @@ function createRock(x) {
 
      if (rock.style.top < GAME_HEIGHT ) {
        moveRock()
-      
+
      } else if (rock.style.top === GAME_HEIGHT) {
       rock.remove()
      }
