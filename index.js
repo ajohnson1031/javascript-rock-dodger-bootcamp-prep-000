@@ -65,14 +65,13 @@ function createRock(x) {
 function endGame() {
   clearInterval(gameInterval)
 
-  ROCKS.forEach(function(rock) {rock.remove() })
+  for(let i in ROCKS) {
+    ROCKS[i].remove()
+  }
 
-  document.removeEventListener('keydown', moveDodger)
-
-  START.innerHTML = 'Play again?'
-  START.style.display = 'inline'
-
-  return alert('YOU LOSE!')
+  window.removeEventListener('keydown', moveDodger)
+  killAnim = true
+  alert('YOU LOSE!')
 }
 
 function moveDodger(e) {
