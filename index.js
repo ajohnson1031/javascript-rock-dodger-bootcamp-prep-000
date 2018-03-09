@@ -119,7 +119,7 @@ function endGame() {
   }
 
   window.removeEventListener('keydown', moveDodger)
-  killAnim = true
+  
   alert('YOU LOSE!')
 }
 
