@@ -9,7 +9,7 @@ const LEFT_ARROW = 37 // use e.which!
 const RIGHT_ARROW = 39 // use e.which!
 const ROCKS = []
 const START = document.getElementById('start')
-let myReq = window.requestAnimationFrame(moveRock)
+var myReq = window.requestAnimationFrame(moveRock)
 var gameInterval = null
 /**
  * Be aware of what's above this line,
