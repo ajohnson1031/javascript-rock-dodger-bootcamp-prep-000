@@ -99,7 +99,7 @@ function createRock(x) {
   if (killAnim)
     window.cancelAnimationRequest(moveRock)
   else
-    window.requestAnimationFrame(moveRock)
+    myReq = window.requestAnimationFrame(moveRock)
   // Add the rock to ROCKS so that we can remove all rocks
   // when there's a collision
   ROCKS.push(rock)
