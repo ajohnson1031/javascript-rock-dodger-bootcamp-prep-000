@@ -65,9 +65,7 @@ function createRock(x) {
    * seems like a good pace.)
    */
   function moveRock() {
-    let thisTop = top += 2
-    rock.style.top = `${thisTop}px`
-
+    rock.style.top = `${top += 2}px`
     // implement me!
     // (use the comments below to guide you!)
     /**
@@ -78,10 +76,10 @@ function createRock(x) {
        endGame()
      }
 
-     if (thisTop < GAME_HEIGHT ) {
+     if (rock.style.top < GAME_HEIGHT ) {
        moveRock()
 
-     } else if (thisTop >= GAME_HEIGHT) {
+     } else if (positionToInteger(rock.style.top) === GAME_HEIGHT) {
       rock.remove()
      }
     /**
