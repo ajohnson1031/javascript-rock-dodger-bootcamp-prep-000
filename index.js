@@ -121,7 +121,7 @@ function endGame() {
   }
 
   window.removeEventListener('keydown', moveDodger)
-
+  killAll = true
   alert('YOU LOSE!')
 }
 
