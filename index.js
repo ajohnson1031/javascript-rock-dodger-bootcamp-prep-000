@@ -95,7 +95,7 @@ function createRock(x) {
   }
 
   // We should kick of the animation of the rock around here
-  if (killAll)
+  if (killAnim)
     window.cancelAnimationRequest(moveRock)
   else
     window.requestAnimationFrame(moveRock)
