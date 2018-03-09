@@ -73,12 +73,13 @@ function createRock(x) {
      * If a rock collides with the DODGER,
      * we should call endGame()
      */
-     if (checkCollision(rock))
+     if (checkCollision(rock)) {
        endGame()
+     }
 
      if (rock.style.top < GAME_HEIGHT ) {
        moveRock()
-     } else {
+     } else if (rock.style.top >= GAME_HEIGHT) {
       rock.remove()
      }
     /**
