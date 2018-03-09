@@ -93,11 +93,11 @@ function createRock(x) {
      * But if the rock *has* reached the bottom of the GAME,
      * we should remove the rock from the DOM
      */
-     window.requestAnimationFrame(moveRock)
+     let myReq = window.requestAnimationFrame(moveRock)
   }
 
   // We should kick of the animation of the rock around here
-  window.requestAnimationFrame(moveRock)
+  let myReq window.requestAnimationFrame(moveRock)
   // Add the rock to ROCKS so that we can remove all rocks
   // when there's a collision
   ROCKS.push(rock)
