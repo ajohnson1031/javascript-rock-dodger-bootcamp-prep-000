@@ -36,12 +36,12 @@ function checkCollision(rock) {
     // FIXME: The rock is 20 pixel's wide -- how do we get the right edge?
     const rockRightEdge = rockLeftEdge + 20;
 
-    if((rockLeftEdge < dodgerLeftEdge && rockRightEdge > dodgerRightEdge) ||
-    (rockLeftEdge > dodgerLeftEdge && rockRightEdge < dodgerRightEdge) ||
-    (rockLeftEdge < dodgerRightEdge && rockRightEdge > dodgerRightEdge)) {
+    if(rockLeftEdge < dodgerLeftEdge && rockRightEdge > dodgerRightEdge ||
+    rockLeftEdge > dodgerLeftEdge && rockRightEdge < dodgerRightEdge ||
+    rockLeftEdge < dodgerRightEdge && rockRightEdge > dodgerRightEdge) {
       return false
     } else {
-      return true
+      return true;
     }
   }
 }
@@ -96,7 +96,7 @@ function createRock(x) {
   }
 
   // We should kick of the animation of the rock around here
-  window.requestAnimationFrame(moveRock)
+window.requestAnimationFrame(moveRock)
   // Add the rock to ROCKS so that we can remove all rocks
   // when there's a collision
   ROCKS.push(rock)
